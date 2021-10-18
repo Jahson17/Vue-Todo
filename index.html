@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Vue.js</title>
+
+  <!-- Vue.js -->
+  <script src="res/vue@2.6.12.js">Hello</script>
+<link rel="stylesheet" href="Vue.css"/>
+</head>
+
+<body>
+  <div id="vue-app">
+    <transition name="swell">
+      
+    <div v-if="disp">
+      <input class="input" type="text"  placeholder="Input a Todo" v-model="input"/></div>
+    </transition>
+<button @click="btn">Click</button>
+
+<transition-group name="bounce" 
+tag="ul">
+ <li 
+    v-for="(todo,index) in todos"
+    v-bind:key="todo.title"
+    v-bind:tittle="todo.title"
+    V-if="show"
+    >{{todo.title}} <button 
+    @click="todos.splice(index,1)">&times;</button> </li>
+</transition-group>
+
+</div>
+
+
+<style type="text/css">
+.ho{
+  
+}
+</style>
+  <!-- Project -->
+  <script src="app.js"></script>
+</body>
+</html>
